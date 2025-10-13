@@ -1,0 +1,129 @@
+openapi: 3.1.0
+info:
+  title: AI Lahendused Consultation Request API
+  version: 1.0.0
+  description: Submission endpoint for marketing landing page contact form.
+servers:
+  - url: https://www.ailahendused.ee
+paths:
+  /api/contact-request:
+    post:
+      summary: Create a consultation request
+      operationId: createConsultationRequest
+      tags:
+        - consultation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConsultationRequestInput'
+      responses:
+        '202':
+          description: Accepted for delivery to CRM
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubmissionReceipt'
+        '400':
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Duplicate submission within 24 hours
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DuplicateResponse'
+        '502':
+          description: Downstream CRM failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  schemas:
+    ConsultationRequestInput:
+      type: object
+      required:
+        - fullName
+        - company
+        - email
+        - preferredContact
+        - projectSummary
+        - consentGranted
+      properties:
+        fullName:
+          type: string
+          minLength: 2
+          maxLength: 80
+          description: Visitor full name (supports Estonian characters)
+        company:
+          type: string
+          minLength: 2
+          maxLength: 120
+        email:
+          type: string
+          format: email
+          description: Normalized to lowercase before delivery
+        phone:
+          type: string
+          pattern: '^\+[1-9][0-9]{1,14}$'
+          nullable: true
+        preferredContact:
+          type: string
+          enum: [email, phone]
+        projectSummary:
+          type: string
+          minLength: 20
+          maxLength: 600
+        consentGranted:
+          type: boolean
+        metadata:
+          type: object
+          additionalProperties: false
+          properties:
+            source:
+              type: string
+              enum: ["landing-page"]
+              default: "landing-page"
+            utmCampaign:
+              type: string
+              nullable: true
+    SubmissionReceipt:
+      type: object
+      properties:
+        requestId:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [queued, delivered]
+        submittedAt:
+          type: string
+          format: date-time
+    DuplicateResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [duplicate]
+        existingRequestId:
+          type: string
+          format: uuid
+        message:
+          type: string
+    ErrorResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [error]
+        message:
+          type: string
+        details:
+          type: array
+          items:
+            type: string
