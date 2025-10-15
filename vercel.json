@@ -1,0 +1,13 @@
+{
+  "framework": "nextjs",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "regions": ["arn1"],
+  "git": {
+    "deployments": {
+      "autoAlias": true
+    }
+  }
+}
+
