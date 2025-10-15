@@ -7,11 +7,24 @@ export type HeroCopy = {
   secondaryCta: LocaleString;
 };
 
+export type HeroMetric = {
+  value: LocaleString;
+  label: LocaleString;
+};
+
+export type TrustedLogo = {
+  name: LocaleString;
+  logo: string;
+  alt: LocaleString;
+};
+
 export type ServiceCategory = {
   slug: string;
   title: LocaleString;
   benefit: LocaleString;
   exampleUseCase: LocaleString;
+  timeline: LocaleString;
+  kpi: LocaleString;
   icon: string;
 };
 
@@ -25,10 +38,16 @@ export type TestimonialCopy = {
   fallbackMessage: LocaleString;
 };
 
+export type FaqItem = {
+  question: LocaleString;
+  answer: LocaleString;
+};
+
 export type SectionAnchors = {
   hero: string;
   services: string;
   testimonial: string;
+  faq: string;
   consultation: string;
 };
 
@@ -36,16 +55,41 @@ export const anchors: SectionAnchors = {
   hero: "ai-hero",
   services: "ai-services",
   testimonial: "ai-testimonial",
+  faq: "ai-faq",
   consultation: "ai-konsultatsioon",
 };
 
 export const heroCopy: HeroCopy = {
   headline: "AI Lahendused, mis vabastavad sinu tiimi",
   subheading:
-    "Loome vestlusroboteid ja automatiseeritud t\u00F6\u00F6vooge, et v\u00E4hendada k\u00E4sit\u00F6\u00F6d ning hoida kliendid rahul alates esimesest kontaktist kuni j\u00E4relteeninduseni.",
-  primaryCta: "K\u00FCsi tasuta konsultatsiooni",
+    "Loome vestlusroboteid ja automatiseeritud töövooge, et vähendada käsitööd ning hoida kliendid rahul alates esimesest kontaktist kuni järelteeninduseni.",
+  primaryCta: "Küsi tasuta konsultatsiooni",
   secondaryCta: "Broneeri demo",
 };
+
+export const heroMetrics: HeroMetric[] = [
+  { value: "95%", label: "automatiseeritud korduvpäringuid" },
+  { value: "<30 sek", label: "keskmine vastusaeg" },
+  { value: "6 nädalat", label: "piloodi lansseerimiseni" },
+];
+
+export const trustedLogos: TrustedLogo[] = [
+  {
+    name: "Põhjala Rendi",
+    logo: "/branding/logos/pohjala-rendi.svg",
+    alt: "Põhjala Rendi logo",
+  },
+  {
+    name: "Nordic Klinik",
+    logo: "/branding/logos/nordic-klinik.svg",
+    alt: "Nordic Klinik logo",
+  },
+  {
+    name: "Baltic Gear",
+    logo: "/branding/logos/baltic-gear.svg",
+    alt: "Baltic Gear logo",
+  },
+];
 
 export const servicesCopy: ServiceCategory[] = [
   {
@@ -53,44 +97,69 @@ export const servicesCopy: ServiceCategory[] = [
     title: "Vestlusrobotid",
     benefit: "24/7 klienditugi eesti ja inglise keeles",
     exampleUseCase:
-      "Veebivestlus ja WhatsApp vastavad korduvatele p\u00E4ringutele ja suunavad keerulisemad teemad \u00F5igesse tiimi.",
+      "Veebivestlus ja WhatsApp vastavad korduvatele päringutele ning annavad keerulisemad teemad õigele spetsialistile.",
+    timeline: "Piloot 2–3 nädalaga, täismahus lansseerimine 6 nädala jooksul.",
+    kpi: "Eesmärk: vähemalt 80% korduvate päringute automatiseerimine ja <30 sek vastusaeg.",
     icon: "/branding/conversational-agents.svg",
   },
   {
     slug: "automation",
     title: "Protsesside automatiseerimine",
-    benefit: "Eemaldab k\u00E4sit\u00F6\u00F6 korduvatest back-office \u00FClesannetest",
+    benefit: "Eemaldab käsitöö korduvatest back-office ülesannetest",
     exampleUseCase:
-      "AI agent s\u00FCnkroniseerib tellimused, CRM-i ning raamatupidamise ja annab tiimile hoiatused k\u00F5rvalekalletest.",
+      "AI agent sünkroniseerib tellimused, CRM-i ning raamatupidamise ja annab tiimile hoiatused kõrvalekalletest.",
+    timeline: "Töövoog kaardistatud 1 nädalaga, MVP automaatika 4–6 nädalaga.",
+    kpi: "Eesmärk: 40–60% vähem käsitöötunde ühes protsessis ja 0 vahelejäänud teavitust.",
     icon: "/branding/automation.svg",
   },
   {
     slug: "marketing",
     title: "Turundusabi agent",
-    benefit: "Koostab kampaaniaplaanid ja tekstid sinu br\u00E4ndi h\u00E4\u00E4lega",
+    benefit: "Koostab kampaaniaplaanid ja tekstid sinu brändi häälega",
     exampleUseCase:
-      "Valmistab igan\u00E4dalase uudiskirja ja sotsiaalmeedia postitused eestikeelsena ning t\u00F5lgib need inglise keelde.",
+      "Valmistab iganädalase uudiskirja ja sotsiaalmeedia postitused eestikeelsena ning tõlgib need inglise keelde.",
+    timeline: "Sisuautomaatika valmib 1–2 nädalaga koos tooni-treeninguga.",
+    kpi: "Eesmärk: 3× kiiremini avaldatud sisu ja püsiv e-maili avamismäär vähemalt 35%.",
     icon: "/branding/marketing.svg",
   },
   {
     slug: "custom-solutions",
     title: "Kohandatud AI lahendused",
-    benefit: "Seob sisemised s\u00FCsteemid nutikate t\u00F6\u00F6voogudega",
+    benefit: "Seob sisemised süsteemid nutikate töövoogudega",
     exampleUseCase:
       "Ehitasime broneeringuassistendi, mis koordineerib kalendreid ja saadab kliendile personaalse kinnituse.",
+    timeline: "Ühine discovery sprint 2 nädalat, lahendus tootmises 6–8 nädalaga.",
+    kpi: "Eesmärk: selge ROI 3 kuu jooksul ja vähemalt 90% kasutajarahulolu piloodis.",
     icon: "/branding/custom-solutions.svg",
   },
 ];
 
 export const testimonialCopy: TestimonialCopy = {
   quote:
-    "AI agent v\u00F5ttis \u00FCle korduvad p\u00E4ringud ja vabastas meie klienditoe spetsialistide aega k\u00F5rgema v\u00E4\u00E4rtusega t\u00F6\u00F6ks.",
-  client: "Laura, tegevjuht \u2013 P\u00F5hjala Rendi",
-  outcome: "V\u00E4hendasime reageerimisaega 63% ja suurendasime m\u00FC\u00FCgivihjete arvu 2x",
+    "AI agent võttis üle korduvad päringud ja vabastas meie klienditoe spetsialistide aega kõrgema väärtusega tööks.",
+  client: "Laura, tegevjuht – Põhjala Rendi",
+  outcome: "Vähendasime reageerimisaega 63% ja suurendasime müügivihjete arvu 2x",
   ctaLabel: "Loe case-studyt",
   ctaHref: undefined,
   image: "/testimonials/sample-client.jpg",
   fallbackMessage:
-    "Soovid n\u00E4ha t\u00E4pseid tulemusi oma sektoris? K\u00FCsi meilt v\u00E4rskeid case-studysid.",
+    "Soovid näha täpseid tulemusi oma sektoris? Küsi meilt värskeid case-studysid.",
 };
 
+export const faqCopy: FaqItem[] = [
+  {
+    question: "Kui kiiresti saan AI agendi tööle?",
+    answer:
+      "Esimese nädalaga kaardistame eesmärgid ja andmeallikad, 2–3 nädalaga on piloot klientide ees. Täielik lansseerimine võtab enamasti 6 nädalat.",
+  },
+  {
+    question: "Kas pean ise tehnilise toe eest hoolitsema?",
+    answer:
+      "Ei pea. Meie tiim haldab mudelite uuendusi, järelevalvet ja logimist ning õpetame sinu meeskonna tulemusi analüüsima.",
+  },
+  {
+    question: "Kuidas mõõdate automatiseerimise mõju?",
+    answer:
+      "Seame KPI-d (nt vastuskiirus, käsitöö tundide kokkuhoid) enne pilooti ja raporteerime tulemused iga kuu koos soovitustega järgmiste sammude jaoks.",
+  },
+];

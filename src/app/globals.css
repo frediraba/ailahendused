@@ -24,3 +24,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes trusted-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .animate-trusted-marquee {
+    animation: trusted-marquee var(--marquee-duration, 28s) linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-trusted-marquee {
+    animation-play-state: paused;
+  }
+}

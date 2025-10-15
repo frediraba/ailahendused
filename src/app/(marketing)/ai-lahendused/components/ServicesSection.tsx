@@ -24,12 +24,21 @@ export function ServicesSection() {
           </div>
           <p className="mt-4 text-sm text-foreground/70">{service.benefit}</p>
           <p className="mt-3 text-sm text-foreground/80">
-            <span className="font-medium text-foreground">Praktiline n\u00E4ide: </span>
+            <span className="font-medium text-foreground">Praktiline näide: </span>
             {service.exampleUseCase}
           </p>
+          <dl className="mt-4 grid gap-3 rounded-xl border border-foreground/10 bg-background/40 p-4 text-sm text-foreground/75">
+            <div className="space-y-1">
+              <dt className="font-semibold text-foreground">Tüüpiline ajaraam</dt>
+              <dd>{service.timeline}</dd>
+            </div>
+            <div className="space-y-1 border-t border-foreground/10 pt-3">
+              <dt className="font-semibold text-foreground">Mõõdetav tulemus</dt>
+              <dd>{service.kpi}</dd>
+            </div>
+          </dl>
         </article>
       ))}
     </div>
   );
 }
-

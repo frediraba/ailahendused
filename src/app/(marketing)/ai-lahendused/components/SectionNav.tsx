@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 import { anchors } from "@/app/(marketing)/ai-lahendused/strings";
 
 const anchorList = [
-  { id: anchors.hero, label: "\u00DClevaade" },
+  { id: anchors.hero, label: "Ülevaade" },
   { id: anchors.services, label: "Teenused" },
   { id: anchors.testimonial, label: "Tulemused" },
+  { id: anchors.faq, label: "KKK" },
   { id: anchors.consultation, label: "Konsultatsioon" },
 ];
 
@@ -72,4 +73,3 @@ export function SectionNav() {
     </nav>
   );
 }
-

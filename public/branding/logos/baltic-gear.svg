@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="44" viewBox="0 0 160 44">
+  <g fill="none" fill-rule="evenodd">
+    <path d="M12 30h28" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+    <path d="M16 22h20" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M20 14h12" stroke="#fde68a" stroke-width="4" stroke-linecap="round"/>
+    <text x="56" y="28" fill="#0f172a" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="600">
+      Baltic Gear
+    </text>
+  </g>
+</svg>

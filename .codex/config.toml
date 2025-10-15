@@ -1,2 +1,4 @@
+model = "gpt-5-codex"
+model_reasoning_effort = "high"
 [projects.'\\?\C:\Users\fredi\new\ailahendused']
 trust_level = "trusted"

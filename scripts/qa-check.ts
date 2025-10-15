@@ -25,8 +25,10 @@ function createRequest(body: unknown): MockRequest {
 }
 
 async function verifyConsultationFlow() {
-  process.env.CRM_WEBHOOK_URL = "https://crm.test/submit";
-  process.env.CRM_WEBHOOK_TOKEN = "test-token";
+  process.env.CONTACT_EMAIL_PROVIDER = "resend";
+  process.env.RESEND_API_KEY = "test-api-key";
+  process.env.CONTACT_FROM_EMAIL = "consultations@test.local";
+  process.env.CONTACT_TO_EMAIL = "info@test.local";
 
   const { POST } = await import("../src/app/api/contact-request/route");
 
@@ -55,7 +57,8 @@ async function verifyConsultationFlow() {
     consentGranted: true,
   };
 
-  const firstResponse = await POST(createRequest(payload) as any);
+  const firstRequest = createRequest(payload) as Parameters<typeof POST>[0];
+  const firstResponse = await POST(firstRequest);
   const firstJson = await firstResponse.json();
 
   if (firstResponse.status !== 200 && firstResponse.status !== 202) {
@@ -67,7 +70,8 @@ async function verifyConsultationFlow() {
   console.log(`Consultation success check passed (status: ${firstResponse.status}).`);
 
   fetchCalls = [];
-  const duplicateResponse = await POST(createRequest(payload) as any);
+  const duplicateRequest = createRequest(payload) as Parameters<typeof POST>[0];
+  const duplicateResponse = await POST(duplicateRequest);
   if (duplicateResponse.status !== 409) {
     const dupJson = await duplicateResponse.json();
     throw new Error(
@@ -79,7 +83,7 @@ async function verifyConsultationFlow() {
     throw new Error(`Duplicate payload unexpected: ${JSON.stringify(duplicateJson)}`);
   }
   if (fetchCalls.length !== 0) {
-    throw new Error("Duplicate submission should not call CRM fetch again.");
+    throw new Error("Duplicate submission should not trigger a second email send.");
   }
   console.log("Consultation duplicate check passed (409).");
 }
