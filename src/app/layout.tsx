@@ -2,6 +2,8 @@
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SiteHeader } from "@/app/components/SiteHeader";
+import { SiteFooter } from "@/app/components/SiteFooter";
 
 const siteUrl = "https://www.ailahendused.ee";
 
@@ -24,14 +26,17 @@ export const metadata: Metadata = {
     template: "%s | AI Lahendused",
   },
   description:
-    "AI agendid ja automatiseerimine Eesti väikestele ettevõtetele: vestlusrobotid, protsessiautomaatika ja turundusabi, mis toovad mõõdetava ärikasvu.",
+    "AI agendid ja automatiseerimine Eesti väikeettevõtetele: vestlusrobotid, protsessiautomaatika ja turundusabi, mis toovad mõõdetava ärikasvu.",
   keywords: [
-    "AI",
+    "AI lahendused",
+    "AI agent",
     "tehisintellekt",
     "vestlusrobot",
     "automatiseerimine",
-    "turundus",
-    "Eesti ettevõtted",
+    "AI turundus",
+    "Eesti",
+    "väikeettevõtted",
+    "AI integratsioon",
   ],
   openGraph: {
     title: "AI Lahendused | Tehisintellekti partner Eesti ettevõtetele",
@@ -68,7 +73,7 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
-  themeColor: "#0f172a",
+  themeColor: "#0b1220",
   category: "technology",
 };
 
@@ -108,7 +113,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground antialiased`}
       >
+        {/* Background layers */}
+        <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 bg-grid bg-radial-brand" />
+        <SiteHeader />
         {children}
+        <SiteFooter />
         <Script id="organization-ld-json" type="application/ld+json">
           {JSON.stringify(organizationJsonLd)}
         </Script>

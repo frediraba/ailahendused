@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60" role="img" aria-label="Tartu Hambaravi">
+  <title>Tartu Hambaravi</title>
+  <rect width="200" height="60" rx="10" fill="#0b1220"/>
+  <g transform="translate(100 30)">
+    <circle r="18" fill="#0b1220" stroke="#60a5fa" stroke-width="2"/>
+    <path d="M-10 -2 q 10 -10 20 0 q -5 16 -10 16 q -5 0 -10 -16" fill="#60a5fa"/>
+    <path d="M-2 6 l4 4 l8 -10" stroke="#0b1220" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

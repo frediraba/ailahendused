@@ -105,7 +105,7 @@ export function ConsultationForm() {
             type: "duplicate",
             message:
               (json.message as string) ??
-              "Oleme juba saanud sinu p\u00E4ringu. V\u00F5tame peagi \u00FChendust.",
+              "Oleme juba saanud sinu päringu. Võtame peagi ühendust.",
           });
           setSubmitting(false);
           return;
@@ -116,7 +116,7 @@ export function ConsultationForm() {
             type: "error",
             message:
               (json.message as string) ??
-              "Midagi l\u00E4ks valesti. Palun proovi uuesti v\u00F5i kirjuta info@ailahendused.ee.",
+              "Midagi läks valesti. Palun proovi uuesti või kirjuta info@ailahendused.ee.",
           });
           setSubmitting(false);
           return;
@@ -129,7 +129,7 @@ export function ConsultationForm() {
         setMessage({
           type: "error",
           message:
-            "Serverini ei j\u00F5utud. Kontrolli interneti\u00FChendust ja proovi uuesti.",
+            "Serverini ei jõutud. Kontrolli internetiühendust ja proovi uuesti.",
         });
       } finally {
         setSubmitting(false);
@@ -141,7 +141,7 @@ export function ConsultationForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-6 rounded-2xl border border-foreground/10 bg-background p-6 shadow-sm"
+      className="card gradient-border flex flex-col gap-6 p-6"
       aria-labelledby="consultation-heading"
       action="/api/contact-request"
     >
@@ -150,16 +150,16 @@ export function ConsultationForm() {
           Tasuta konsultatsioon
         </p>
         <h2 id="consultation-heading" className="text-2xl font-semibold">
-          R\u00E4\u00E4gime, kuidas AI saab sinu tiimi aidata
+          Räägime, kuidas AI saab sinu tiimi aidata
         </h2>
         <p className="text-sm text-foreground/70">
-          T\u00E4ida vorm ja v\u00F5tame sinuga \u00FChendust \u00FChte t\u00F6\u00F6p\u00E4eva jooksul.
+          Täida vorm ja võtame sinuga ühendust ühe tööpäeva jooksul.
         </p>
       </header>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <Field
-          label="T\u00E4isnimi"
+          label="Täisnimi"
           name="fullName"
           autoComplete="name"
           value={values.fullName}
@@ -168,7 +168,7 @@ export function ConsultationForm() {
           required
         />
         <Field
-          label="Ettev\u00F5te"
+          label="Ettevõte"
           name="company"
           autoComplete="organization"
           value={values.company}
@@ -232,7 +232,7 @@ export function ConsultationForm() {
           <textarea
             name="projectSummary"
             className="min-h-[140px] resize-y rounded-lg border border-foreground/15 bg-background px-4 py-3 text-base shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
-            placeholder="Kirjelda, millist protsessi v\u00F5i klienditeekonda soovid AI abil parandada"
+            placeholder="Kirjelda, millist protsessi või klienditeekonda soovid AI abil parandada"
             value={values.projectSummary}
             onChange={(event) => updateField("projectSummary")(event.target.value)}
             required
@@ -252,7 +252,7 @@ export function ConsultationForm() {
             onChange={(event) => updateField("consentGranted")(event.target.checked)}
           />
           <span>
-            Luban AI Lahendused meeskonnal minuga \u00FChendust v\u00F5tta ja salvestada esitatud andmed p\u00E4ringu t\u00F6\u00F6tlemiseks.
+            Luban AI Lahendused meeskonnal minuga ühendust võtta ja salvestada esitatud andmed päringu töötlemiseks.
           </span>
         </label>
         {errors.consentGranted ? (
@@ -266,10 +266,10 @@ export function ConsultationForm() {
           className="inline-flex items-center justify-center rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition hover:bg-foreground/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground disabled:cursor-not-allowed disabled:bg-foreground/40"
           disabled={isSubmitDisabled}
         >
-          {submitting ? "Saatmine..." : "Saada p\u00E4ring"}
+          {submitting ? "Saatmine..." : "Saada päring"}
         </button>
         <p className="text-xs text-foreground/60">
-          Vastame \u00FChte t\u00F6\u00F6p\u00E4eva jooksul. Vajadusel kirjuta otse: info@ailahendused.ee
+          Vastame ühe tööpäeva jooksul. Vajadusel kirjuta otse: info@ailahendused.ee
         </p>
       </div>
 
@@ -335,7 +335,7 @@ function Message({ message }: MessageProps) {
         role="status"
         className="rounded-lg border border-emerald-600/20 bg-emerald-50 px-4 py-3 text-sm text-emerald-900"
       >
-        T\u00E4nan! Sinu konsultatsioonisoov on vastu v\u00F5etud. Viide: {message.requestId}
+        Tänan! Sinu konsultatsioonisoov on vastu võetud. Viide: {message.requestId}
       </div>
     );
   }

@@ -49,8 +49,8 @@ export function SectionNav() {
   }, []);
 
   return (
-    <nav aria-label="Lehe jaotised" className="sticky top-4 z-10">
-      <ul className="flex flex-col gap-2 rounded-2xl border border-foreground/10 bg-background/80 p-4 shadow-sm backdrop-blur">
+    <nav aria-label="Lehe jaotised" className="z-10">
+      <ul className="card flex flex-col gap-2 p-4 backdrop-blur">
         {anchorList.map(({ id, label }) => {
           const isActive = id === active;
           return (

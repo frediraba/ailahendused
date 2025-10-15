@@ -60,9 +60,9 @@ export const anchors: SectionAnchors = {
 };
 
 export const heroCopy: HeroCopy = {
-  headline: "AI Lahendused, mis vabastavad sinu tiimi",
+  headline: "AI agendid Eesti väikeettevõtetele",
   subheading:
-    "Loome vestlusroboteid ja automatiseeritud töövooge, et vähendada käsitööd ning hoida kliendid rahul alates esimesest kontaktist kuni järelteeninduseni.",
+    "Automatiseerime rutiini, parandame kliendikogemust ja toome mõõdetava võidu – vestlusrobotid, nutikad töövood ja turundusabi.",
   primaryCta: "Küsi tasuta konsultatsiooni",
   secondaryCta: "Broneeri demo",
 };
@@ -88,6 +88,21 @@ export const trustedLogos: TrustedLogo[] = [
     name: "Baltic Gear",
     logo: "/branding/logos/baltic-gear.svg",
     alt: "Baltic Gear logo",
+  },
+  {
+    name: "Siiditee Kohvik",
+    logo: "/branding/logos/siiditee-kohvik.svg",
+    alt: "Siiditee Kohvik logo",
+  },
+  {
+    name: "Tartu Hambaravi",
+    logo: "/branding/logos/tartu-hambaravi.svg",
+    alt: "Tartu Hambaravi logo",
+  },
+  {
+    name: "Kiviaia Ehitus",
+    logo: "/branding/logos/kiviaia-ehitus.svg",
+    alt: "Kiviaia Ehitus logo",
   },
 ];
 
@@ -140,7 +155,7 @@ export const testimonialCopy: TestimonialCopy = {
   client: "Laura, tegevjuht – Põhjala Rendi",
   outcome: "Vähendasime reageerimisaega 63% ja suurendasime müügivihjete arvu 2x",
   ctaLabel: "Loe case-studyt",
-  ctaHref: undefined,
+  ctaHref: "/case-studies",
   image: "/testimonials/sample-client.jpg",
   fallbackMessage:
     "Soovid näha täpseid tulemusi oma sektoris? Küsi meilt värskeid case-studysid.",

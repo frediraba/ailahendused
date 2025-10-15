@@ -1,28 +1,62 @@
 @import "tailwindcss";
 
 :root {
+  /* Brand palette: black/blue/light */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0b1220; /* near-black */
+  --brand: #1d4ed8; /* blue-700 */
+  --brand-foreground: #ffffff;
+  --muted: #f6f8fc; /* light surface */
+  --border: #e5e7eb; /* gray-200 */
+  --radius-lg: 14px;
+  --radius-xl: 22px;
+  --shadow-sm: 0 1px 2px rgba(2, 6, 23, 0.06);
+  --shadow-md: 0 10px 20px rgba(2, 6, 23, 0.08);
+  --shadow-lg: 0 20px 40px rgba(2, 6, 23, 0.12);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #05070f; /* deep navy */
+    --foreground: #e6edf6;
+    --brand: #60a5fa; /* blue-400 for contrast on dark */
+    --brand-foreground: #0b1220;
+    --muted: #0b1220;
+    --border: #1f2937; /* gray-800 */
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Layout helpers */
+.app-container {
+  width: 100%;
+  max-width: 80rem; /* ~1280px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem; /* 20px */
+  padding-right: 1.25rem;
+}
+
+.text-balance {
+  text-wrap: balance;
 }
 
 @keyframes trusted-marquee {
@@ -37,6 +71,97 @@ body {
 @layer utilities {
   .animate-trusted-marquee {
     animation: trusted-marquee var(--marquee-duration, 28s) linear infinite;
+  }
+  .btn,
+  .btn-primary,
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+  .btn-primary {
+    @apply bg-[--color-brand] text-[--color-brand-foreground] focus-visible:outline-[--color-brand] hover:bg-[color-mix(in_oklab,var(--brand),#000_10%)];
+  }
+  .btn-outline {
+    @apply border border-[--color-border] text-[--color-foreground] hover:border-[--color-foreground] focus-visible:outline-[--color-foreground];
+  }
+
+  /* Card & surfaces */
+  .card {
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    @apply border border-[--color-border] bg-background/90 backdrop-blur;
+  }
+  .card-hover {
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: color-mix(in oklab, var(--brand) 30%, var(--border));
+  }
+
+  /* Gradient border effect */
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: calc(var(--radius-xl) + 2px);
+    padding: 1px;
+    background: conic-gradient(from 180deg, color-mix(in oklab, var(--brand), #fff 40%), transparent, color-mix(in oklab, var(--brand), #000 20%));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Glass accents */
+  .glass {
+    @apply bg-background/60 backdrop-blur;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Background patterns */
+  .bg-grid {
+    background-image: radial-gradient(color-mix(in oklab, var(--brand), transparent 85%) 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-position: -10px -10px;
+  }
+  .bg-radial-brand {
+    background: radial-gradient(1200px 600px at 50% -10%, color-mix(in oklab, var(--brand), transparent 80%), transparent 60%),
+      radial-gradient(800px 400px at 100% 0%, color-mix(in oklab, var(--brand), transparent 88%), transparent 60%);
+  }
+
+  /* Heading gradient */
+  .heading-gradient {
+    background: linear-gradient(180deg, var(--foreground) 0%, color-mix(in oklab, var(--brand), var(--foreground) 20%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Appear animation */
+  .animate-fade-in-up {
+    animation: fade-in-up 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up {
+    animation: none;
   }
 }
 

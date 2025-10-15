@@ -1,10 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="160" height="44" viewBox="0 0 160 44">
-  <g fill="none" fill-rule="evenodd">
-    <rect x="8" y="6" width="36" height="32" rx="8" fill="#5b21b6"/>
-    <path d="M22 16h10a4 4 0 0 1 0 8h-6" stroke="#ede9fe" stroke-width="2.6" stroke-linecap="round"/>
-    <path d="M22 29h10" stroke="#c4b5fd" stroke-width="2.6" stroke-linecap="round"/>
-    <text x="56" y="28" fill="#0f172a" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="600">
-      Põhjala Rendi
-    </text>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60" role="img" aria-label="Põhjala Rendi">
+  <title>Põhjala Rendi</title>
+  <rect width="200" height="60" rx="10" fill="#0b1220"/>
+  <g transform="translate(100 30)">
+    <!-- Circular badge -->
+    <circle r="18" fill="#0b1220" stroke="#60a5fa" stroke-width="2"/>
+    <!-- North star -->
+    <g fill="#60a5fa">
+      <rect x="-1.2" y="-12" width="2.4" height="24" rx="1"/>
+      <rect x="-12" y="-1.2" width="24" height="2.4" rx="1"/>
+      <rect x="-8" y="-8" width="16" height="2.4" rx="1" transform="rotate(45)"/>
+      <rect x="-8" y="-8" width="16" height="2.4" rx="1" transform="rotate(-45)"/>
+    </g>
+    <!-- Rent key tag -->
+    <g transform="translate(10 10) rotate(-20)">
+      <rect x="-6" y="-3" width="12" height="6" rx="2" fill="#60a5fa"/>
+      <circle cx="4" cy="0" r="1.5" fill="#0b1220"/>
+    </g>
   </g>
 </svg>

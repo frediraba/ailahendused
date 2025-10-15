@@ -5,7 +5,7 @@ export function TestimonialSection() {
   const hasCaseStudy = Boolean(testimonialCopy.ctaHref);
 
   return (
-    <article className="mx-auto flex max-w-3xl flex-col gap-6 rounded-3xl border border-foreground/10 bg-foreground/5 p-8 shadow-sm">
+    <article className="app-container mx-auto flex max-w-3xl flex-col gap-6 rounded-3xl border border-foreground/10 bg-foreground/5 p-8 shadow-sm card gradient-border">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
         {testimonialCopy.image ? (
           <div className="relative h-20 w-20 flex-none overflow-hidden rounded-full border border-foreground/10 bg-background/60">

@@ -39,7 +39,7 @@ export default function AilahendusedPage() {
       </section>
 
       <div className="relative flex flex-col gap-10 px-6 py-16 sm:py-24 lg:flex-row lg:items-start lg:gap-12">
-        <div className="order-2 flex-1 space-y-20">
+        <div className="order-1 flex-1 space-y-20">
           <section
             id={SECTION_IDS.services}
             className="scroll-mt-24 space-y-8 border-b border-foreground/10 pb-16"
@@ -124,7 +124,7 @@ export default function AilahendusedPage() {
             </Suspense>
           </section>
         </div>
-        <aside className="order-1 lg:order-3 lg:w-64">
+        <aside className="order-2 lg:order-3 lg:w-64 lg:sticky lg:top-24 self-start">
           <SectionNav />
         </aside>
       </div>
