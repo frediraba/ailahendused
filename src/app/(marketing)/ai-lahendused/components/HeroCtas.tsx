@@ -1,9 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { anchors, heroCopy } from "@/app/(marketing)/ai-lahendused/strings";
 
 const consultHref = `#${anchors.consultation}`;
-const servicesHref = `#${anchors.services}`;
+const caseStudiesHref = "/case-studies";
+const demoHref =
+  "mailto:info@ailahendused.ee?subject=Soovin%20AI%20demo&body=Tere%20AI%20Lahendused%2C%0A%0ASoovin%20broneerida%20demo.%20Palun%20võtke%20minuga%20ühendust.%0A%0AT%C3%A4nades%2C";
 
 export function HeroCtas() {
   const scrollTo = (id: string) => {
@@ -24,21 +27,16 @@ export function HeroCtas() {
     }
   };
 
-  const handleServices = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    scrollTo(anchors.services);
-  };
-
   return (
     <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-start">
       <a href={consultHref} onClick={handleConsult} className="btn-primary">
         {heroCopy.primaryCta}
       </a>
-      <a href={consultHref} onClick={handleConsult} className="btn-outline">
+      <Link href={caseStudiesHref} className="btn-outline">
         {heroCopy.secondaryCta}
-      </a>
-      <a href={servicesHref} onClick={handleServices} className="btn-outline">
-        Vaata teenuseid
+      </Link>
+      <a href={demoHref} className="btn-outline">
+        {heroCopy.tertiaryCta}
       </a>
     </div>
   );

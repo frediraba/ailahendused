@@ -73,13 +73,13 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
-  themeColor: "#0b1220",
   category: "technology",
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: "#0b1220",
 };
 
 const organizationJsonLd = {

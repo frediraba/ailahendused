@@ -5,7 +5,10 @@ import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
+  { href: "/#ai-vaartus", label: "Miks meie" },
   { href: "/#ai-services", label: "Teenused" },
+  { href: "/#ai-protsess", label: "Metoodika" },
+  { href: "/#ai-sektorid", label: "Sektorid" },
   { href: "/case-studies", label: "Case-studyd" },
   { href: "/#ai-faq", label: "KKK" },
 ];

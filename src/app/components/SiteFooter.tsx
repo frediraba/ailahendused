@@ -16,8 +16,12 @@ export function SiteFooter() {
         <nav aria-label="Kiirlingid" className="space-y-3">
           <h2 className="text-base font-semibold">Lingid</h2>
           <ul className="space-y-2 text-sm">
+            <li><Link href="/#ai-vaartus" className="hover:underline">Miks AI Lahendused</Link></li>
             <li><Link href="/#ai-services" className="hover:underline">Teenused</Link></li>
+            <li><Link href="/#ai-protsess" className="hover:underline">Metoodika</Link></li>
+            <li><Link href="/#ai-sektorid" className="hover:underline">Sektorid</Link></li>
             <li><Link href="/case-studies" className="hover:underline">Case-studyd</Link></li>
+            <li><Link href="/#ai-ressursid" className="hover:underline">Ressursid</Link></li>
             <li><Link href="/#ai-faq" className="hover:underline">KKK</Link></li>
             <li><Link href="/#ai-konsultatsioon" className="hover:underline">Küsi tasuta konsultatsiooni</Link></li>
           </ul>
