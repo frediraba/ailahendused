@@ -8,9 +8,9 @@ const anchorList = [
   { id: anchors.value, label: "Miks valida" },
   { id: anchors.services, label: "Teenused" },
   { id: anchors.approach, label: "Kuidas töötame" },
+  { id: anchors.testimonial, label: "Tulemused" },
   { id: anchors.industries, label: "Sektorid" },
   { id: anchors.resources, label: "Ressursid" },
-  { id: anchors.testimonial, label: "Tulemused" },
   { id: anchors.faq, label: "KKK" },
   { id: anchors.consultation, label: "Konsultatsioon" },
 ];
