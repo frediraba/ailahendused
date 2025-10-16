@@ -20,13 +20,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 w-full border-b border-[--color-border] bg-[color-mix(in_oklab,var(--background),#000_4%)]/90 backdrop-blur">
       <div className="app-container flex items-center justify-between gap-4 py-3">
         <Link href="/" className="group inline-flex items-center gap-3">
-          <span className="relative block h-8 w-8 overflow-hidden rounded-md ring-1 ring-[--color-border]">
+          <span className="relative block h-8 w-10 overflow-hidden rounded-md ring-1 ring-[--color-border] bg-background">
             <Image
-              src="/branding/conversational-agents.svg"
+              src="/LOGO.PNG"
               alt="AI Lahendused logo"
               fill
-              sizes="32px"
-              className="object-contain p-1.5"
+              sizes="(max-width: 640px) 40px, 40px"
+              className="object-contain p-1"
               priority
             />
           </span>

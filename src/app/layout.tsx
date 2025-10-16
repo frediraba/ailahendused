@@ -48,19 +48,24 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${siteUrl}/branding/conversational-agents.svg`,
-        width: 512,
-        height: 512,
-        alt: "AI Lahendused visuaal",
+        url: `${siteUrl}/LOGO.PNG`,
+        width: 731,
+        height: 547,
+        alt: "AI Lahendused logo",
       },
     ],
+  },
+  icons: {
+    icon: "/LOGO.PNG",
+    shortcut: "/LOGO.PNG",
+    apple: "/LOGO.PNG",
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Lahendused | Tehisintellekti partner Eesti ettevõtetele",
     description:
       "AI agendid, mis automatiseerivad korduvad protsessid ja parandavad kliendikogemust.",
-    images: [`${siteUrl}/branding/conversational-agents.svg`],
+    images: [`${siteUrl}/LOGO.PNG`],
   },
   alternates: {
     canonical: siteUrl,
@@ -87,7 +92,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "AI Lahendused",
   url: siteUrl,
-  logo: `${siteUrl}/branding/conversational-agents.svg`,
+  logo: `${siteUrl}/LOGO.PNG`,
   sameAs: [
     "https://www.linkedin.com/company/ai-lahendused",
     "https://www.facebook.com/ailahendused",
