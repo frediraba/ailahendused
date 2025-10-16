@@ -13,7 +13,7 @@ export function ApproachSection() {
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[color-mix(in_oklab,var(--brand),#000_10%)] text-base font-semibold text-[--color-brand-foreground]">
                 {index + 1}
               </span>
-              <span className="text-xs font-medium uppercase tracking-[0.3em] text-foreground/50">
+              <span className="text-xs font-medium uppercase tracking-[0.3em] text-foreground/80">
                 Etapp {index + 1}
               </span>
             </div>
@@ -21,7 +21,7 @@ export function ApproachSection() {
             <p className="text-sm leading-relaxed text-foreground/75">
               {step.description}
             </p>
-            <p className="mt-auto rounded-lg bg-[--color-muted] px-4 py-3 text-xs font-medium uppercase tracking-[0.2em] text-foreground/60">
+            <p className="mt-auto rounded-lg bg-[--color-muted] px-4 py-3 text-xs font-medium uppercase tracking-[0.2em] text-foreground/80">
               {step.deliverable}
             </p>
           </li>
