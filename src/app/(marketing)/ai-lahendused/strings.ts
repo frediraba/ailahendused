@@ -104,18 +104,18 @@ export const anchors: SectionAnchors = {
 };
 
 export const heroCopy: HeroCopy = {
-  headline: "AI lahendused, mis töötavad Eesti väikeettevõtetele",
+  headline: "AI Lahendused — Tehisaru, mis töötab sinu heaks",
   subheading:
-    "Disainime ja lansseerime AI agente, mis automatiseerivad müügi, klienditoe ja back-office'i töövood – eestikeelsed vestlusrobotid, protsesside automatiseerimine ja turundusabi, mis toob mõõdetava ärikasvu.",
-  primaryCta: "Küsi tasuta konsultatsiooni",
-  secondaryCta: "Loe case-studyt",
-  tertiaryCta: "Broneeri demo",
+    "Aitame Eesti väikeettevõtetel tuua tehisaru päriselt tööle. Alustame väiksest, toome kiire võidu ja mõõdame tulemuse.",
+  primaryCta: "Küsi pakkumist",
+  secondaryCta: "Vaata teenuseid",
+  tertiaryCta: "Võta ühendust",
 };
 
 export const heroMetrics: HeroMetric[] = [
-  { value: "95%", label: "automatiseeritud korduvpäringuid piloodi järel" },
-  { value: "6 nädalat", label: "keskmine aeg ideest tootmiskeskkonda" },
-  { value: "3×", label: "kiirem sisuloome ja kampaaniate lansseerimine" },
+  { value: "7–14 päeva", label: "esimese MVP ja nähtava võiduni" },
+  { value: "60%", label: "keskmine käsitöö vähenemine automatiseeritud protsessides" },
+  { value: "24/7", label: "kättesaadav klienditugi vestlusroboti kaudu" },
 ];
 
 export const trustedLogos: TrustedLogo[] = [
@@ -155,153 +155,136 @@ export const servicesCopy: ServiceCategory[] = [
   {
     slug: "conversational-agents",
     title: "Vestlusrobotid",
-    benefit: "24/7 klienditugi eesti ja inglise keeles",
+    benefit:
+      "Automaatne klienditugi veebis ja sotsiaalides. Vähem korduvküsimusi, kiirem vastus, parem rahulolu.",
     exampleUseCase:
-      "Veebivestlus ja WhatsApp vastavad korduvatele päringutele ning annavad keerulisemad teemad õigele spetsialistile.",
-    timeline: "Piloot 2–3 nädalaga, täismahus lansseerimine 6 nädala jooksul.",
-    kpi: "Eesmärk: vähemalt 80% korduvate päringute automatiseerimine ja <30 sek vastusaeg.",
+      "Messengeris ja WhatsAppis tegutsev agent tervitab külastajaid, vastab hinnapäringutele ning eskaleerib keerulised juhtumid otse meeskonnale.",
+    timeline: "Esimene versioon 10 päevaga, kanalite laiendus vastavalt vajadusele.",
+    kpi: "Mõõdame vastamise kiirust, automatiseerimise katvust ja CSAT-i.",
     icon: "/branding/conversational-agents.svg",
   },
   {
     slug: "automation",
     title: "Protsesside automatiseerimine",
-    benefit: "Eemaldab käsitöö korduvatest back-office ülesannetest",
+    benefit:
+      "Broneerimised, aruandlus, tellimused ja CRM-sünkron – vähenda käsitööd ja vigasid.",
     exampleUseCase:
-      "AI agent sünkroniseerib tellimused, CRM-i ning raamatupidamise ja annab tiimile hoiatused kõrvalekalletest.",
-    timeline: "Töövoog kaardistatud 1 nädalaga, MVP automaatika 4–6 nädalaga.",
-    kpi: "Eesmärk: 40–60% vähem käsitöötunde ühes protsessis ja 0 vahelejäänud teavitust.",
+      "Automaatika paneb kalendrid tööle, koostab aruanded ja sünkroniseerib tellimused ERP-i ning CRM-i vahel.",
+    timeline: "Töövoog kaardistame nädalaga, MVP automatiseerimine valmib 2–4 nädalaga.",
+    kpi: "Sihime 20–60% ajavõitu ning veavabamat protsessi.",
     icon: "/branding/automation.svg",
   },
   {
     slug: "marketing",
-    title: "Turundusabi agent",
-    benefit: "Koostab kampaaniaplaanid ja tekstid sinu brändi häälega",
+    title: "Turundus- ja sisuabi",
+    benefit:
+      "E-kirjad, kampaaniaplaanid, generatiivne sisu ja SEO-toetus kohaliku turu jaoks.",
     exampleUseCase:
-      "Valmistab iganädalase uudiskirja ja sotsiaalmeedia postitused eestikeelsena ning tõlgib need inglise keelde.",
-    timeline: "Sisuautomaatika valmib 1–2 nädalaga koos tooni-treeninguga.",
-    kpi: "Eesmärk: 3× kiiremini avaldatud sisu ja püsiv e-maili avamismäär vähemalt 35%.",
+      "AI kirjutab igakuised uudiskirjad, koostab kampaaniaplaani ja optimeerib blogitekstid valitud märksõnadele.",
+    timeline: "Sisuagent töötab täismahus kahe nädalaga.",
+    kpi: "Fookuses on avamismäärad, orgaaniline liiklus ja päringute kasv.",
     icon: "/branding/marketing.svg",
   },
   {
     slug: "custom-solutions",
-    title: "Kohandatud AI lahendused",
-    benefit: "Seob sisemised süsteemid nutikate töövoogudega",
+    title: "Kohandatud AI-lahendused",
+    benefit:
+      "Spetsiifilised agendid ja integratsioonid sinu töövoogude järgi.",
     exampleUseCase:
-      "Ehitasime broneeringuassistendi, mis koordineerib kalendreid ja saadab kliendile personaalse kinnituse.",
-    timeline: "Ühine discovery sprint 2 nädalat, lahendus tootmises 6–8 nädalaga.",
-    kpi: "Eesmärk: selge ROI 3 kuu jooksul ja vähemalt 90% kasutajarahulolu piloodis.",
+      "Disainime agent-mustreid, mis integreeruvad sisemiste andmeallikate ja partnerite API-dega ning töötavad turvaliselt.",
+    timeline: "Discovery 2 nädalat, tootmisvalmis lahendus 6–8 nädalaga.",
+    kpi: "Koostame ROI mudeli ja jälgime kasutaja rahulolu ning protsessi läbilaskevõimet.",
     icon: "/branding/custom-solutions.svg",
   },
 ];
 
 export const testimonialCopy: TestimonialCopy = {
   quote:
-    "AI agent võttis üle korduvad päringud ja vabastas meie klienditoe spetsialistide aega kõrgema väärtusega tööks.",
-  client: "Laura, tegevjuht – Põhjala Rendi",
-  outcome: "Vähendasime reageerimisaega 63% ja kasvatasime müügivihjete arvu 2x",
-  ctaLabel: "Vaata lähemalt",
-  ctaHref: "/case-studies",
-  image: "/testimonials/sample-client.jpg",
+    "Vestlusrobot vähendas meil vastamise aega poole võrra. Automatiseeritud broneerimine lõpetas topeltkinnitused. Sisuabi andis kampaaniatele stabiilse tempo.",
+  client: "Tagasiside meie klientidelt",
+  outcome: "Kolm erinevat meeskonda jagasid oma kogemust AI Lahendustega",
   fallbackMessage:
-    "Soovid näha täpseid tulemusi oma sektoris? Küsi meilt värskeid case-studysid.",
+    "Soovid kuulda täpseid numbreid? Kirjuta meile ja saadame sulle valiku värskeid edulugusid.",
 };
 
 export const faqCopy: FaqItem[] = [
   {
-    question: "Kui kiiresti saan AI agendi tööle?",
-    answer:
-      "Esimese nädalaga kaardistame eesmärgid ja andmeallikad, 2–3 nädalaga on piloot klientide ees. Täielik lansseerimine võtab enamasti 6 nädalat.",
+    question: "Kui kiiresti saan tulemuse?",
+    answer: "Esimese väärtuse sihime 7–14 päeva jooksul (MVP).",
   },
   {
-    question: "Kas pean ise tehnilise toe eest hoolitsema?",
-    answer:
-      "Ei pea. Meie tiim haldab mudelite uuendusi, järelevalvet ja logimist ning õpetame sinu meeskonna tulemusi analüüsima.",
+    question: "Kas meil on vaja tehnilist tiimi?",
+    answer: "Ei pea. Teeme võtmetöö meie poolt, teie annate sisendi ja kinnitate.",
   },
   {
-    question: "Kuidas mõõdate automatiseerimise mõju?",
-    answer:
-      "Seame KPI-d (nt vastuskiirus, käsitöö tundide kokkuhoid) enne pilooti ja raporteerime tulemused iga kuu koos soovitustega järgmiste sammude jaoks.",
+    question: "Kuidas ROI mõõdate?",
+    answer: "Seame KPI-d (ajavõit, konversioon, vead) ja raporteerime regulaarselt.",
   },
   {
-    question: "Millistesse süsteemidesse AI agent integreerub?",
-    answer:
-      "Ehitasime pistikud populaarsetele Eesti tarkvaradele nagu Erply, Scoro, Pipedrive ja Merit Palk. Vajadusel loome uue integratsiooni REST API, webhookide või RPA abil.",
+    question: "Mis keeles tugi on?",
+    answer: "Eesti ja inglise; vajadusel kohapeal.",
   },
   {
-    question: "Mis infot peab ette valmistama enne koostööd?",
-    answer:
-      "Vajame näidisdialooge, protsessikirjeldusi ja ligipääsu süsteemidele, kuhu AI agent andmeid kirjutab või kust loeb. Discovery-sprint aitab need allikad turvaliselt kaardistada.",
-  },
-  {
-    question: "Kuidas hinnastamine toimub?",
-    answer:
-      "Discovery-sprint (2 nädalat) on fikseeritud tasuga. Pärast pilooti lepime kokku igakuise haldustasu ja kasutuspõhise mudeli, mis sõltub AI agentide mahust ja kasutajate arvust.",
+    question: "Kas saab alustada väikese testiga?",
+    answer: "Jah. Soovitame alustada piiratud ulatusega, kiire võiduga.",
   },
 ];
 
 export const valuePoints: ValuePoint[] = [
   {
-    slug: "strategy",
-    title: "Strateegia, mis lähtub ärieesmärkidest",
+    slug: "fast-launch",
+    title: "Kiire juurutus",
     description:
-      "Kaardistame kriitilised kasutusjuhtumid discovery-sprindi jooksul ja tõlgime need AI agentideks, mis toovad mõõdetava väärtuse.",
-    proof: "Valmis prioriseeritud teekaart 3 tööpäevaga koos KPI defineerimisega.",
-    icon: "/window.svg",
-  },
-  {
-    slug: "local-language",
-    title: "Eesti keel ja kohalikud süsteemid",
-    description:
-      "Koolitame mudelid sinu brändi tooniga ning integreerime Eesti platvormidega nagu Erply, Merit Palk, SimplBooks ja Pipedrive.",
-    proof: "Eestikeelne intentsioonide mudel ja integratsioonikataloog kohe kasutamiseks.",
-    icon: "/globe.svg",
-  },
-  {
-    slug: "roi",
-    title: "ROI, mida saad juhatusele näidata",
-    description:
-      "Mõõdame automatiseerimise katvust, vastuskiirust ja kliendirahulolu ning raporteerime need iga kuu koos järgmiste sammude soovitustega.",
-    proof: "Keskmiselt 40–60% vähem käsitööd ühe protsessi kohta pärast 6 nädalat.",
+      "Käivitame minimaalse lahenduse päevade, mitte kuude jooksul. Kaardistame esmase töövoo ja toome automaatika kliendi ette kohe, kui väärtus on kinnitust leidnud.",
+    proof: "Piloot on laiv 7–14 päeva jooksul, et saaksid tulemusi päris keskkonnas mõõta.",
     icon: "/branding/automation.svg",
   },
   {
-    slug: "compliance",
-    title: "Turvalisus ja vastavus nõuetele",
+    slug: "clear-roi",
+    title: "Selge ROI",
     description:
-      "GDPR, logimine ja ligipääsude haldus on protsessi sisse ehitatud. Auditijälg tagab, et tead täpselt, mida agent kliendile lubas.",
-    proof: "GDPR-i kontrollnimekiri ja ligipääsude audit raporteeritakse igal sprindil.",
-    icon: "/file.svg",
+      "Seame mõõdikud: säästetud aeg, konversioon, korduvtöö vähenemine. Iga sprindi lõpus võrdleme numbreid ja otsustame järgmised sammud koos.",
+    proof: "Keskmiselt 60% vähem käsitööd ja parem kliendirahulolu juba esimese kuu jooksul.",
+    icon: "/chart.svg",
+  },
+  {
+    slug: "local-support",
+    title: "Kohalik tugi",
+    description:
+      "Eestikeelne suhtlus ja tugi kogu teekonna vältel. Vajadusel tuleme kohapeale, aitame tiimi koolitada ning hoiame süsteemi töös.",
+    proof: "Püsiv kontaktisik ja tugi nii eesti kui ka inglise keeles.",
+    icon: "/globe.svg",
   },
 ];
 
 export const approachSteps: ApproachStep[] = [
   {
     index: 1,
-    title: "Discovery + äriprotsessid",
+    title: "Sisseelamine",
     description:
-      "Intervjuud võtmeosapooltega, andmeallikate kaardistus ja KPI-de kokkuleppimine. Loome esimesed vestlusskriptid ja töövoodiagrammid.",
-    deliverable: "Valmis protsessikaart, riskianalüüs ja automatiseerimise teekaart.",
+      "Eesmärgid, mõõdikud, andmeallikad. Räägime läbi, mis on kiireim võit ja millist mõju ootad tiimis ning kliendikogemuses.",
+    deliverable: "Selge prioriteet ja mõõdetavad KPI-d.",
   },
   {
     index: 2,
-    title: "Prototüüp ja testimine",
+    title: "Prototüüp",
     description:
-      "Koolitame AI agendi sinu andmetega, laseme tal vastata päris klientide küsimustele ja kogume meeskonnalt tagasisidet.",
-    deliverable: "Tõendatud MVP, mille tulemeid võrreldakse inimagendi tööga.",
+      "7–14 päeva: MVP, esimene kasu. Ehitatakse töövoog või vestlusrobot, mis lahendab ühe selge probleemi.",
+    deliverable: "Toimiv MVP päriselus testimiseks.",
   },
   {
     index: 3,
-    title: "Integratsioon ja lansseerimine",
+    title: "Integreerimine",
     description:
-      "Ühendame CRM-i, broneeringusüsteemid ja makselahendused. Koostame eskalatsioonireeglid ning koolitame tiimi uut agenti kasutama.",
-    deliverable: "Tootmises olev AI agent koos meeskonna koolituse ja teadmistebaasiga.",
+      "CRM, kalendrid, arved, e-kirjad, öövood. Võtame ette tehnilised ühendused ja automatiseerime eskalatsiooni reeglid.",
+    deliverable: "Integratsioonid ja töövood, mis toimivad ilma käsitööta.",
   },
   {
     index: 4,
-    title: "Jätkuarendus ja mõõtmine",
+    title: "Mõõtmine & ROI",
     description:
-      "Monitoorime kvaliteeti, optimeerime dialooge ja lisame uusi kasutusjuhtumeid. Raporteerime KPI-d ja ROI juhtkonnale.",
-    deliverable: "Igakuine tulemusraport koos soovitustega järgmisteks sprintideks.",
+      "KPI-d paika, raporteerime kasu. Arutame koos, kuhu laiendada ja millal tuua järgmine agent mängu.",
+    deliverable: "Regulaarne ROI raport ja kasvuprogramm.",
   },
 ];
 
@@ -363,15 +346,15 @@ export const resourceHighlights: ResourceHighlight[] = [
 ];
 
 export const seoNarrative: SeoNarrative = {
-  heading: "Tehisintellekti lahendused, mis räägivad sinu brändi keeles",
+  heading: "AI Lahendused toob tehisaru päriselt tööle",
   lead:
-    "AI Lahendused ühendab strateegia, disaini ja tehnoloogia, et tuua tehisintellekt Eesti väikese ja keskmise ettevõtte igapäevatöösse. Loome agendid, kes mõistavad sinu kliendi sõnavara ja teevad koostööd olemasolevate süsteemidega.",
+    "Aitame Eesti väikeettevõtetel ehitada vestlusroboteid, automatiseerida protsesse ja hoida turundust järjepidevana. Meie fookus on kiirel juurutusel, selgel ROI-l ja kohaliku toe pakkumisel.",
   bullets: [
-    "AI agendid, mis töötavad eesti ja inglise keeles, kasutades sinu ettevõtte tooniga kohandatud keelemudeleid.",
-    "Integratsioonid Scoro, Pipedrive, Erply, SimplBooks, HubSpot ja teiste populaarsete tööriistadega.",
-    "Tehisintellektil põhinev automatiseerimine, mis katab nii müügivihjete kvalifitseerimise, klienditoe kui ka back-office'i töövood.",
-    "Fookus mõõdetavale ROI-le – iga sprint lõpeb KPI raportiga ja järgmiste sammude soovitusega.",
+    "Vestlusrobotid, mis räägivad sinu brändi keeles ja töötavad nii veebis kui ka Messengeri või WhatsAppi kanalis.",
+    "Automatiseeritud töövood, mis ühendavad CRM-i, raamatupidamise, kalendrid ja aruandluse ning vähendavad käsitööd.",
+    "Turundus- ja sisuabi, mis hoiab kampaaniate tempo peal ning tõstab orgaanilist liiklust ja konversiooni.",
+    "Kohandatud AI-lahendused koos riskijuhtimise, auditi ning koolitusega, et süsteem püsiks usaldusväärne.",
   ],
   closing:
-    "Meie meeskond on juurutanud AI agente Eesti jaekaubanduse, tervishoiu, logistika ja teeninduse ettevõtetes. Aitame ka sinu tiimil teha esimese sammu ning kasvatada automatiseerimise katvust turvaliselt ja tõendatult.",
+    "Iga koostöö algab 7–14 päevase MVP-ga ja lõpeb mõõdetava kasuga. Kui vajad partnerit, kes räägib sinuga eesti keeles ja mõtleb äriväärtusest, siis AI Lahendused on sinu jaoks.",
 };

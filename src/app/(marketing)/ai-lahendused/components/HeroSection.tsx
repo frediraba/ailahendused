@@ -14,7 +14,7 @@ export function HeroSection() {
     <div className="relative app-container space-y-8 text-left">
       <div aria-hidden className="pointer-events-none absolute -top-16 left-1/2 -z-10 h-64 w-[46rem] -translate-x-1/2 rounded-full blur-3xl bg-radial-brand opacity-80" />
       <p className="text-sm font-semibold uppercase tracking-[0.3em] text-foreground/70 animate-fade-in-up">
-        Tehisintellekti agendid Eesti ettevõtetele
+        AI Lahendused · Kohalik tehisaru partner
       </p>
       <h1 className="text-balance heading-gradient text-4xl font-semibold tracking-tight sm:text-5xl animate-fade-in-up" style={{ animationDelay: "60ms" }}>
         {heroCopy.headline}

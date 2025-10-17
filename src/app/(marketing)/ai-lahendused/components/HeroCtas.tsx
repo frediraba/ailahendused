@@ -4,7 +4,7 @@ import Link from "next/link";
 import { anchors, heroCopy } from "@/app/(marketing)/ai-lahendused/strings";
 
 const consultHref = `#${anchors.consultation}`;
-const caseStudiesHref = "/case-studies";
+const caseStudiesHref = "/services";
 const demoHref =
   "mailto:info@ailahendused.ee?subject=Soovin%20AI%20demo&body=Tere%20AI%20Lahendused%2C%0A%0ASoovin%20broneerida%20demo.%20Palun%20võtke%20minuga%20ühendust.%0A%0AT%C3%A4nades%2C";
 

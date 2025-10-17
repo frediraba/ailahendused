@@ -50,7 +50,7 @@ async function verifyConsultationFlow() {
     fullName: "Mari Maasikas",
     company: "Test OÜ",
     email: "mari@example.com",
-    phone: "+3725555555",
+    phone: "+3720000000",
     preferredContact: "email" as const,
     projectSummary:
       "Soovin automatiseerida korduvatele küsimustele vastamist veebivestluses.",

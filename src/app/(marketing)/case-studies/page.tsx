@@ -51,7 +51,7 @@ export default function CaseStudiesPage() {
             </dl>
             <div className="mt-auto flex items-center gap-3 pt-4">
               <Link href="/#ai-konsultatsioon" className="btn-primary">
-                Küsi tasuta konsultatsiooni
+                Küsi pakkumist
               </Link>
               <Link href="/" className="btn-outline">
                 Tagasi avalehele

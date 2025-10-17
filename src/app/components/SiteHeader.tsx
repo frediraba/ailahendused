@@ -7,7 +7,7 @@ import { useState } from "react";
 const navLinks = [
   { href: "/#ai-vaartus", label: "Miks meie" },
   { href: "/#ai-services", label: "Teenused" },
-  { href: "/#ai-protsess", label: "Metoodika" },
+  { href: "/#ai-protsess", label: "Kuidas töötame" },
   { href: "/#ai-sektorid", label: "Sektorid" },
   { href: "/case-studies", label: "Case-studyd" },
   { href: "/#ai-faq", label: "KKK" },
@@ -46,7 +46,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link href="/#ai-konsultatsioon" className="btn-primary">
-            Küsi tasuta konsultatsiooni
+            Küsi pakkumist
           </Link>
         </nav>
 
@@ -77,7 +77,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <Link href="/#ai-konsultatsioon" onClick={() => setOpen(false)} className="btn-primary">
-              Küsi tasuta konsultatsiooni
+              Küsi pakkumist
             </Link>
           </nav>
         </div>

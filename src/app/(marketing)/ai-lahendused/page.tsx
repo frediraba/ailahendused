@@ -10,6 +10,7 @@ import { IndustriesSection } from "@/app/(marketing)/ai-lahendused/components/In
 import { ResourcesSection } from "@/app/(marketing)/ai-lahendused/components/ResourcesSection";
 import { TestimonialSection } from "@/app/(marketing)/ai-lahendused/components/TestimonialSection";
 import { ValuePropositionSection } from "@/app/(marketing)/ai-lahendused/components/ValuePropositionSection";
+import { FAQ } from "@/app/components/FAQ";
 import {
   anchors,
   approachSteps,
@@ -20,9 +21,9 @@ import {
 export const SECTION_IDS = anchors;
 
 export const metadata: Metadata = {
-  title: "AI Lahendused – AI agendid ja automatiseerimine Eesti väikeettevõtetele",
+  title: "AI Lahendused – Tehisaru, mis töötab sinu heaks",
   description:
-    "AI konsultatsioon, eestikeelsed vestlusrobotid, protsesside automatiseerimine ja turundusabi. Viime discovery-sprindi, prototüübi ja lansseerimise 6 nädalaga ning mõõdame ROI-d.",
+    "Aitame Eesti väikeettevõtetel tuua tehisaru päriselt tööle: vestlusrobotid, protsesside automatiseerimine, turundus- ja sisuabi ning kohandatud AI-lahendused. Kiire juurutus, selge ROI, kohalik tugi.",
   keywords: [
     "AI lahendused Eesti",
     "AI agent",
@@ -32,9 +33,9 @@ export const metadata: Metadata = {
     "väikeettevõtte automatiseerimine",
   ],
   openGraph: {
-    title: "AI Lahendused – AI agendid ja automatiseerimine Eesti väikeettevõtetele",
+    title: "AI Lahendused – Tehisaru, mis töötab sinu heaks",
     description:
-      "Tehisintellekti partner Eesti väikeettevõtetele: discovery-sprint, prototüüp, integratsioon ja ROI raport kuue nädalaga.",
+      "Aitame Eesti väikeettevõtetel tuua tehisaru päriselt tööle: vestlusrobotid, protsesside automatiseerimine, turundus- ja sisuabi ning kohandatud AI-lahendused. Kiire juurutus, selge ROI, kohalik tugi.",
   },
 };
 
@@ -127,14 +128,14 @@ export default function AilahendusedPage() {
           >
             <header className="space-y-3">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-foreground/60">
-                Miks AI Lahendused
+                Miks meie
               </p>
               <h2 className="text-3xl font-semibold tracking-tight">
-                Partner, kes ühendab strateegia, disaini ja inseneeria
+                Meie fookus on kiires juurutuses ja mõõdetavas väärtuses
               </h2>
               <p className="text-base text-foreground/70">
-                Kaardistame automatiseeritavad töövood, koolitame AI agendi sinu tooniga ja lansseerime
-                lahenduse koos meeskonnaga.
+                Need kolm lubadust annavad sulle selge partneri: käivitame tehisaru kiiresti,
+                toome ROI numbritesse ja toetame sind eestikeelselt igal sammul.
               </p>
             </header>
             <ValuePropositionSection />
@@ -149,11 +150,11 @@ export default function AilahendusedPage() {
                 Teenused
               </p>
               <h2 className="text-3xl font-semibold tracking-tight">
-                AI agendid müügile, klienditoele ja back-office&apos;ile
+                Tehisaru sinu müügi, toe ja turunduse teenistuses
               </h2>
               <p className="text-base text-foreground/70">
-                Alustame selge kasutusjuhtumiga ja laiendame agentuuristiilis tiimiga uutesse kanalitesse,
-                kui KPI-d on tõestatud.
+                Valime töövoo, mis annab kiire võidu: vestlusrobotid, protsesside automatiseerimine, sisuabi
+                ja kohandatud lahendused ehitatakse sinu tiimi päris vajaduste järgi.
               </p>
             </header>
             <ServicesSection />
@@ -165,14 +166,14 @@ export default function AilahendusedPage() {
           >
             <header className="space-y-3">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-foreground/60">
-                Metoodika
+                Kuidas töötame
               </p>
               <h2 className="text-3xl font-semibold tracking-tight">
-                Struktureeritud protsess ideest mõõdetava ROI-ni
+                Struktureeritud protsess nelja sammuga tulemusteni
               </h2>
               <p className="text-base text-foreground/70">
-                Iga etapp annab käega katsutava väljundi: teekaart, MVP, lansseerimine ja igakuine
-                optimeerimine.
+                Sisseelamine, prototüüp, integreerimine ja mõõtmine – igas etapis valid järgmise sammu
+                numbrite, mitte kõhutunde põhjal.
               </p>
             </header>
             <ApproachSection />
@@ -184,13 +185,14 @@ export default function AilahendusedPage() {
           >
             <header className="space-y-3">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-foreground/60">
-                Tulemused
+                Tagasiside
               </p>
               <h2 className="text-3xl font-semibold tracking-tight">
-                Usaldus põhineb mõõdetavatel tulemustel
+                Kliendid kinnitavad, et tehisaru töötab nende kasuks
               </h2>
               <p className="text-base text-foreground/70">
-                Mõõdame katvust, vastuskiirust ja kliendirahulolu ning toome juhatusele selge ROI.
+                Vestlusrobotid, automatiseeritud broneerimised ja sisuabi on jätnud päris jälje meeskondade
+                ajagraafikule ja kliendikogemusele.
               </p>
             </header>
             <TestimonialSection />
@@ -252,31 +254,19 @@ export default function AilahendusedPage() {
                 Vastused piloodi kestusele, integratsioonidele, andmete ettevalmistusele ja hinnastamisele.
               </p>
             </header>
-            <dl className="space-y-6">
-              {faqCopy.map((item) => (
-                <div
-                  key={item.question}
-                  className="rounded-2xl border border-foreground/10 bg-background/40 p-6 shadow-sm"
-                >
-                  <dt className="text-lg font-semibold text-foreground">{item.question}</dt>
-                  <dd className="mt-3 text-sm leading-relaxed text-foreground/75">
-                    {item.answer}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+            <FAQ items={faqCopy} />
           </section>
 
           <section id={SECTION_IDS.consultation} className="scroll-mt-24 space-y-6">
             <header className="space-y-3">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-foreground/60">
-                Vali endale sobiv aeg
+                Kontakt
               </p>
               <h2 className="text-3xl font-semibold tracking-tight">
-                Räägime, milline agent annab kiireima võidu
+                Võta ühendust
               </h2>
               <p className="text-base text-foreground/70">
-                Vorm jõuab otse meie AI konsultantideni, kes vastavad ühe tööpäeva jooksul.
+                Kirjelda lühidalt oma vajadust – vastame kiiresti ja soovitame järgmise sammu.
               </p>
             </header>
             <Suspense>

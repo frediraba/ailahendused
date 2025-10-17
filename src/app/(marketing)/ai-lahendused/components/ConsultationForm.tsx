@@ -147,13 +147,14 @@ export function ConsultationForm() {
     >
       <header className="space-y-2">
         <p className="text-sm font-medium uppercase tracking-[0.3em] text-foreground/80">
-          Tasuta konsultatsioon
+          Kiire tagasiside
         </p>
         <h2 id="consultation-heading" className="text-2xl font-semibold">
-          Räägime, kuidas AI saab sinu tiimi aidata
+          Kirjelda oma vajadust ja leiame kiireima järgmise sammu
         </h2>
         <p className="text-sm text-foreground/70">
-          Täida vorm ja võtame sinuga ühendust ühe tööpäeva jooksul.
+          Täida vorm ning võtame sinuga ühendust ühe tööpäeva jooksul, et kinnitada ajakava ja jagada
+          esmast soovitust.
         </p>
       </header>
 

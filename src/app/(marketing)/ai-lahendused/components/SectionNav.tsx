@@ -5,14 +5,14 @@ import { anchors } from "@/app/(marketing)/ai-lahendused/strings";
 
 const anchorList = [
   { id: anchors.hero, label: "Ülevaade" },
-  { id: anchors.value, label: "Miks valida" },
+  { id: anchors.value, label: "Miks meie" },
   { id: anchors.services, label: "Teenused" },
   { id: anchors.approach, label: "Kuidas töötame" },
-  { id: anchors.testimonial, label: "Tulemused" },
+  { id: anchors.testimonial, label: "Tagasiside" },
   { id: anchors.industries, label: "Sektorid" },
   { id: anchors.resources, label: "Ressursid" },
   { id: anchors.faq, label: "KKK" },
-  { id: anchors.consultation, label: "Konsultatsioon" },
+  { id: anchors.consultation, label: "Võta ühendust" },
 ];
 
 function scrollToId(id: string) {

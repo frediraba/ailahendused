@@ -22,11 +22,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "AI Lahendused | Tehisintellekti partner Eesti ettevõtetele",
+    default: "AI Lahendused – Tehisaru, mis töötab sinu heaks",
     template: "%s | AI Lahendused",
   },
   description:
-    "AI agendid ja automatiseerimine Eesti väikeettevõtetele: vestlusrobotid, protsessiautomaatika ja turundusabi, mis toovad mõõdetava ärikasvu.",
+    "Aitame Eesti väikeettevõtetel tuua tehisaru päriselt tööle: vestlusrobotid, protsesside automatiseerimine, turundus- ja sisuabi ning kohandatud AI-lahendused. Kiire juurutus, selge ROI, kohalik tugi.",
   keywords: [
     "AI lahendused",
     "AI agent",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     "AI integratsioon",
   ],
   openGraph: {
-    title: "AI Lahendused | Tehisintellekti partner Eesti ettevõtetele",
+    title: "AI Lahendused – Tehisaru, mis töötab sinu heaks",
     description:
-      "Vestlusrobotid, protsesside automatiseerimine ja turundusabi, et vähendada käsitööd ja tõsta kliendikogemust.",
+      "Aitame Eesti väikeettevõtetel tuua tehisaru päriselt tööle: vestlusrobotid, protsesside automatiseerimine, turundus- ja sisuabi ning kohandatud AI-lahendused. Kiire juurutus, selge ROI, kohalik tugi.",
     url: siteUrl,
     siteName: "AI Lahendused",
     locale: "et_EE",
@@ -62,9 +62,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Lahendused | Tehisintellekti partner Eesti ettevõtetele",
+    title: "AI Lahendused – Tehisaru, mis töötab sinu heaks",
     description:
-      "AI agendid, mis automatiseerivad korduvad protsessid ja parandavad kliendikogemust.",
+      "Aitame Eesti väikeettevõtetel tuua tehisaru päriselt tööle: vestlusrobotid, protsesside automatiseerimine, turundus- ja sisuabi ning kohandatud AI-lahendused. Kiire juurutus, selge ROI, kohalik tugi.",
     images: [`${siteUrl}/LOGO.PNG`],
   },
   alternates: {
@@ -100,7 +100,7 @@ const organizationJsonLd = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+372 5555 5555",
+      telephone: "+372 0000 000",
       contactType: "sales",
       areaServed: "EE",
       availableLanguage: ["et", "en"],
