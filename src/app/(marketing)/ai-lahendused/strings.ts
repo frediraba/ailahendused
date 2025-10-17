@@ -245,7 +245,7 @@ export const valuePoints: ValuePoint[] = [
     description:
       "Seame mõõdikud: säästetud aeg, konversioon, korduvtöö vähenemine. Iga sprindi lõpus võrdleme numbreid ja otsustame järgmised sammud koos.",
     proof: "Keskmiselt 60% vähem käsitööd ja parem kliendirahulolu juba esimese kuu jooksul.",
-    icon: "/chart.svg",
+    icon: "/file.svg",
   },
   {
     slug: "local-support",
